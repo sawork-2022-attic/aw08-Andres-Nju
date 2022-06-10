@@ -32,6 +32,7 @@ public class DeliveryController implements DeliveryApi {
     @GetMapping()
     public ResponseEntity<List<DeliveryEntryDto>> listDelivery() {
         List<DeliveryEntryDto> entries = new ArrayList<>(deliveryMapper.toEntryDtos(deliveryService.getAllEntries()));
+        System.out.println("Below are the deliveries:");
         return new ResponseEntity<>(entries, HttpStatus.OK);
     }
 

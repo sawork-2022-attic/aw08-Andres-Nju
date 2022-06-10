@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.integration.channel.DirectChannel;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
@@ -21,9 +20,4 @@ public class GatewayApplication {
     RestTemplate loadBalancedRestTemplate() {
         return new RestTemplate();
     }
-
-    @Bean
-	public DirectChannel pos_channel() {
-		return new DirectChannel();
-	}
 }
