@@ -10,7 +10,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pos-gateway</artifactId>
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-http</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -25,8 +42,11 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>3.1.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
 
 </project>

@@ -18,3 +18,9 @@ Please implement delivery as an standalone service (just like the random joke se
 ![](Micropos.svg)
 
 Consider the advantage by doing so and write it down in your readme file.
+
+
+
+仿照样例demo，在pos-gateway模块创建HttpInboundGateway和HttpInboundGateway类，分别用IntegrationFlow创建inGate和outGate，两模块通过自定义的channel通信：inGate将http请求发进pos_channel中，outGate从channel中取出并响应
+
+使用异步相应的消息驱动spring-integration框架，系统的可扩展性、可靠性，组件间的低耦合性都得到提升
